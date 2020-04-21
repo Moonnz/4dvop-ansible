@@ -25,8 +25,8 @@
       apt: name=haproxy state=latest
     - name: copy haproxy config file
       copy:
-        src: ./files/haproxy.cfg
-        dest: /etc/haproxy/haproxy
+        src: /home/martin/ansible/files/haproxy.cfg
+        dest: /etc/haproxy/haproxy.cfg
     - name: restart haproxy
       service:
         name: haproxy
